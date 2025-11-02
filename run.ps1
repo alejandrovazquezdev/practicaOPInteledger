@@ -20,6 +20,7 @@ function Show-Help {
     Write-Host "  .\run.ps1 wallet      - Consultar informacion de wallet"
     Write-Host "  .\run.ps1 quote       - Crear una cotizacion de pago"
     Write-Host "  .\run.ps1 flow        - Ejecutar flujo completo de pago"
+    Write-Host "  .\run.ps1 bob-alice   - Flujo completo Bob y Alicia (Clase-12)"
     Write-Host ""
     Write-Host "Otros:" -ForegroundColor Yellow
     Write-Host "  .\run.ps1 install     - Instalar/actualizar dependencias"
@@ -58,6 +59,9 @@ switch ($Command.ToLower()) {
     }
     "flow" {
         Run-Command "examples/04_complete_flow.py"
+    }
+    "bob-alice" {
+        Run-Command "examples/05_bob_alice_flow.py"
     }
     "install" {
         Write-Host "Instalando dependencias..." -ForegroundColor Cyan

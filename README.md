@@ -8,11 +8,24 @@ Basado en el material de aprendizaje sobre interoperabilidad en pagos digitales.
 
 Este proyecto implementa los conceptos aprendidos en las clases sobre:
 
+### Fundamentos (Clases 1-5)
 - **Interledger**: La "autopista" que mueve valor entre sistemas distintos
 - **OpenPayments**: La "API" que permite operar sobre Interledger
-- **Firma de mensajes HTTP**: Usando llaves Ed25519 para autenticidad
-- **Protocolo GNAP**: Para autorización y tokens de acceso
+- **Interoperabilidad**: Conexión directa entre bancos, billeteras y fintechs
+- **ILP (Interledger Protocol)**: Paquetes de valor, conectores y enrutamiento
+
+### API y Desarrollo (Clases 6-9)
 - **API RESTful**: Recursos como quotes, payments, accounts
+- **Firma de mensajes HTTP**: Usando llaves Ed25519 para autenticidad
+- **Wallet Address**: Identificadores públicos tipo URL
+- **Payment Pointers**: Alias amigables para compartir
+
+### Arquitectura Avanzada (Clases 10-12)
+- **GNAP**: Protocolo de autorización y concesiones
+- **Incoming Payments**: Pagos entrantes (lado receptor)
+- **Outgoing Payments**: Pagos salientes (lado remitente)
+- **Flujos interactivos**: Consentimiento del usuario con IdP
+- **Componentes**: AS, Resource Server, Wallet Address Server, ACE, IdP
 
 ## 🛠️ Requisitos Previos
 
@@ -121,6 +134,9 @@ KEY_ID=key-1
 
 # Flujo completo
 .\run.ps1 flow
+
+# Flujo Bob y Alicia (Clase-12)
+.\run.ps1 bob-alice
 ```
 
 ### Usando mise directamente
@@ -137,7 +153,16 @@ mise exec -- python examples/03_create_quote.py
 
 # Ejemplo 4: Flujo completo
 mise exec -- python examples/04_complete_flow.py
+
+# Ejemplo 5: Flujo Bob y Alicia
+mise exec -- python examples/05_bob_alice_flow.py
 ```
+
+## 📖 Documentación Adicional
+
+- **ARQUITECTURA.md**: Explicación detallada de componentes (AS, Resource Server, ACE, IdP)
+- **INICIO-RAPIDO.md**: Guía paso a paso para comenzar
+- **RESUMEN.md**: Resumen ejecutivo del proyecto
 
 ## 📁 Estructura del Proyecto
 
