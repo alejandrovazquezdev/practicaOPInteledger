@@ -1,0 +1,17 @@
+# HTTP client
+httpx==0.27.2
+
+# Cryptography for key generation and signing
+cryptography==43.0.1
+
+# JSON Web Token support
+pyjwt==2.9.0
+
+# Environment variables management
+python-dotenv==1.0.1
+
+# Date/time handling
+python-dateutil==2.9.0
+
+# Pretty printing for debugging
+rich==13.9.2
